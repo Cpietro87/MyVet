@@ -1,0 +1,64 @@
+<%- include("../template/navBar") %>
+<body>
+  <br>
+  <div class="form-register">
+    
+      <h2>Editar datos de Medicamento</h2>
+   
+    <br>
+    <form action="./edit-medica" method="POST">
+      <input type="hidden" name="id" value="<%= medicamento.id %>">
+      <div class="container-input">
+        <div class="input">
+          <label for="mediname" class="form-label">Nombre</label>
+          <input class="controls"type="text" name="mediname" id="mediname" class="form-control" value="<%= medicamento.mediname %>">
+        </div>
+     
+  
+     
+        <div class="input">
+          <label for="tipo" class="form-label">Tipo</label>
+          <input class="controls" type="text" name="tipo" id="tipo" class="form-control" value="<%= medicamento.tipo %>">
+        </div>
+      </div>
+        <div class="container-input">
+        <div class="input">
+          <label for="dosis" class="form-label">Dosis</label>
+          <input class="controls"type="text" name="dosis" id="dosis" class="form-control" value="<%= medicamento.dosis %>">
+        </div>
+     
+      
+        <div class="input">
+          <label for="precio" class="form-label">Precio</label>
+          <input class="controls"type="text" name="porecio" id="precio" class="form-control" value="<%= medicamento.precio%>">
+        </div>
+      </div>
+        <div class="container-input">
+       
+             <div class="input">
+                <label for="vencimiento" class="form-label">Vencimiento</label>
+                <input class="controls"type="text" name="vencimiento" id="vencimiento" class="form-control" value="<%= medicamento.vencimento%>">
+        </div>
+        </div>
+
+      <div class="container-btn">
+        <div class="">
+          <div class="float-start">
+            <button type="submit" class="boton">-Actualizar</button>
+          </div>
+        </div>
+        <div class="">
+          <div class="float-end">
+            <a href="./index" class="boton" >Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>

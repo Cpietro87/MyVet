@@ -1,0 +1,49 @@
+<%- include("../template/navBar") %>
+  </div>
+  <div class="form-register">
+    <h2>Editar Consulta</h2>
+    <hr>
+    <br>
+    <form action="./edit-query" method="POST">
+      <input type="hidden" name="idQuery" value="<%= query.idQuery%>">
+      <div class="container-input">
+        <div class="input">
+          <label for="queryname" class="form-label">Medico</label>
+          <input class="controls" type="text" name="queryname" id="queryname" class="form-control" value="<%= query.queryname%>">
+        </div>
+        <div class="input">
+          <label for="patientId" class="form-label">Paciente</label>
+          <input class="controls" name="patientId" id="patientId" class="form-control" value="<%= query.patientId%>">
+        </div>
+      </div>
+      <br>
+      <div class="container-input">
+        <div class="input">
+          <label for="reason" class="form-label">Motivo de la consulta</label>
+          <input class="controls" type="text" name="reason" id="reason" class="form-control" value="<%= query.reason%>">
+        </div>
+        <div class="input">
+          <label for="diagnosis" class="form-label">Diagnostico</label>
+          <input class="controls" type="text" name="diagnosis" id="diagnosis" class="form-control" value="<%= query.diagnosis%>">
+        </div>        
+      </div>
+        <div class="container-btn">
+          <div>
+            <button type="submit" class="boton">Agregar Consulta</button>
+          </div>
+          <div>
+            <a href="./query" class="boton">Volver</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <script src="js/menu.js"></script>
+
+</body>
+
+</html>

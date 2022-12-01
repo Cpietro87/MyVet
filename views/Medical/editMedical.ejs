@@ -1,0 +1,66 @@
+<%- include("../template/navBar") %>
+<body>
+  <br>
+  <div class="form-register">
+    
+      <h2>Editar datos de Medicos</h2>
+    
+    <br>
+    <form action="./edit-medical" method="POST">
+      <input type="hidden" name="idMedical" value="<%= medical.idMedical %>">
+      <div class="container-input">
+        <div class="input">
+          <label for="medicalname" class="form-label">Nombre </label>
+          <input class="controls" type="text" name="medicalname" id="medicalname" class="form-control" value="<%= medical.medicalname %>">
+        </div>
+      <div class="input">
+        
+          <label for="email" class="form-label">E-mail</label>
+          <input class="controls"type="text" name="email" id="email" class="form-control" value="<%= medical.email %>">
+      </div>
+      </div>
+      <div class="container-input">
+        <div class="input">
+          <label for="phone" class="form-label">Teléfono</label>
+          <input class="controls"type="text" name="phone" id="phone" class="form-control" value="<%= medical.phone %>">
+        </div>
+     
+    
+        <div class="input">
+          <label for="address" class="form-label">Dirección</label>
+          <input class="controls" type="text" name="address" id="address" class="form-control" value="<%= medical.address%>">
+        </div>
+      </div>
+        <div class="container-input">
+             <div class="input">
+                <label for="specialty" class="form-label">Matricula</label>
+                <input class="controls"type="text" name="specialty" id="specialty" class="form-control" value="<%= medical.specialty%>">
+        </div>
+        
+            <div class="input">
+              <label for="datebirth" class="form-label">Fecha de nacimiento</label>
+              <input type="date" name="datebirth" id="datebirth" class="form-control" value="<%= medical.datebirth%>">
+            </div>
+        </div>
+      <br>
+   
+        <div class="container-btn">
+          <div class="float-start">
+            <button type="submit" class="boton">Actualizar</button>
+          </div>
+        
+        <div class="col-6">
+          <div class="float-end">
+            <a href="./index" class="boton" >Volver al inicio</a>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
